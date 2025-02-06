@@ -1,16 +1,37 @@
-# johny_portfolio
+# 🎮 Johny's Portfolio - Web App
 
-A new Flutter project.
+A portfolio web app showcasing my projects and skills.  
+Currently, it features a Pokémon Hangman game. 🚀
 
-## Getting Started
+## 🚧 Project Status  
+🔹 In development (Early Stage)  
+✅ Pokémon Hangman game is working  
+⏳ Coming soon: Improved UI, projects section, and contact page
 
-This project is a starting point for a Flutter application.
+## 🚀 How to Run the Project
 
-A few resources to get you started if this is your first Flutter project:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/your-repo.git
+2. cd your-repo
+3. flutter pub get
+4. flutter run
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### 🛠 **5. Technologies Used**
+```
+- Flutter
+- GoRouter
+- Cubit (flutter_bloc)
+- Freezed
+- GitHub Actions (Future)
+```
+
+## 🛣 Roadmap
+- [x] Implement Pokémon Hangman game
+- [ ] Add complete UI with styles
+- [ ] Projects section
+- [ ] Deploy on GitHub Pages or Vercel
+
+
+
