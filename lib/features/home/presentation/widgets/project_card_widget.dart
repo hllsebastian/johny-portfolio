@@ -56,6 +56,7 @@ class ProjectCardWidget extends StatelessWidget {
     return GestureDetector(
       onTap: () => _showManualDialog(),
       child: Card(
+        color: Colors.blue.shade100,
         elevation: 8,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
         child: SizedBox(

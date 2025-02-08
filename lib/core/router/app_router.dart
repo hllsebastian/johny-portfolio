@@ -4,9 +4,10 @@ import 'package:get_it/get_it.dart';
 import 'package:go_router/go_router.dart';
 import 'package:johny_portfolio/core/logging/logger_service.dart';
 import 'package:johny_portfolio/features/hangman/presentation/screen/hangman_screen.dart';
-import 'package:johny_portfolio/features/home/presentation/screen/home_screen.dart';
+import 'package:johny_portfolio/features/home/presentation/view/home_view.dart';
 import 'package:johny_portfolio/features/pokemon/presentation/cubit/pokemon_cubit.dart';
-import 'package:johny_portfolio/features/pokemon/presentation/screen/pokemon_screen.dart';
+import 'package:johny_portfolio/features/pokemon/presentation/view/pokemon_view.dart';
+import 'package:johny_portfolio/features/projects_section/presentation/view/project_section_view.dart';
 import 'package:johny_portfolio/features/wrap_objects/presentation/screen/wrap_objects_screen.dart';
 
 class AppRouter {
@@ -14,7 +15,7 @@ class AppRouter {
     routes: [
       GoRoute(
         path: '/',
-        builder: (context, state) => HomeScreen(),
+        builder: (context, state) => HomeView(),
       ),
       GoRoute(
         path: '/hangman',
@@ -29,8 +30,12 @@ class AppRouter {
         builder: (context, state) => BlocProvider(
           create: (context) =>
               GetIt.I.get<PokemonCubit>()..fetchRandomPokemon(),
-          child: PokemonScreen(),
+          child: PokemonView(),
         ),
+      ),
+      GoRoute(
+        path: '/project-section',
+        builder: (context, state) => ProjectSectionView(),
       ),
     ],
     errorBuilder: (context, state) {
