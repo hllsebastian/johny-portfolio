@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:get_it/get_it.dart';
 import 'package:johny_portfolio/features/home/presentation/widgets/project_card_widget.dart';
-import 'package:johny_portfolio/features/pokemon/presentation/cubit/pokemon_cubit.dart';
 
 class ProjectsSection extends StatelessWidget {
   const ProjectsSection({Key? key}) : super(key: key);

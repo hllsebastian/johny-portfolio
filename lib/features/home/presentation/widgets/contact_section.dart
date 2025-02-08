@@ -53,24 +53,21 @@ class _ContactItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(right: 20),
-      child: Row(
-        children: [
-          IconButton(
-            icon: Icon(
-              icon,
-              color: Colors.white,
-            ),
-            onPressed: null,
-            tooltip: text,
+    return Row(
+      children: [
+        IconButton(
+          icon: Icon(
+            icon,
+            color: Colors.white,
           ),
-          Text(
-            text,
-            style: TextStyle(color: Colors.white),
-          )
-        ],
-      ),
+          onPressed: null,
+          tooltip: text,
+        ),
+        Text(
+          text,
+          style: TextStyle(color: Colors.white),
+        )
+      ],
     );
   }
 }
