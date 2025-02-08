@@ -57,45 +57,6 @@ class _Projects extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    void _showManualDialog() {
-      showDialog(
-        context: context,
-        barrierDismissible: false,
-        builder: (context) {
-          return AlertDialog(
-            title: const Text('Manual del Juego'),
-            content: const Text(
-              '¡Bienvenido al juego Pokémon Hangman!\n\n'
-              'Reglas del Juego:\n'
-              '1. Adivina el nombre del Pokémon letra por letra.\n'
-              '2. Tienes un límite de 6 intentos fallidos.\n'
-              '3. ¡Descubre el Pokémon antes de que se acaben los intentos!',
-              textAlign: TextAlign.center,
-            ),
-            actions: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  ElevatedButton(
-                    onPressed: () {
-                      context.go('/pokemon');
-                    },
-                    child: const Text('¡Iniciar Juego!'),
-                  ),
-                  ElevatedButton(
-                    onPressed: () {
-                      context.pop();
-                    },
-                    child: const Text('Regresar'),
-                  ),
-                ],
-              ),
-            ],
-          );
-        },
-      );
-    }
-
     return Column(
       children: [
         const Text(
@@ -112,6 +73,7 @@ class _Projects extends StatelessWidget {
             'Click here for more details about my projects',
             style: TextStyle(
               color: Colors.black,
+              fontWeight: FontWeight.bold,
               fontSize: 18,
             ),
             textAlign: TextAlign.center,
@@ -119,66 +81,6 @@ class _Projects extends StatelessWidget {
           onPressed: () => context.go('/project-section'),
         )
       ],
-    );
-  }
-}
-
-// class _ContacMe extends StatelessWidget {
-//   const _ContacMe();
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Center(
-//       child: Column(
-//         crossAxisAlignment: CrossAxisAlignment.center,
-//         children: [
-//           _ContactItem(
-//             icon: Icons.email,
-//             text: 'hllsebastian@gmail.com',
-//           ),
-//           _ContactItem(
-//             icon: Icons.linked_camera,
-//             text: 'LinkedIn',
-//           ),
-//           _ContactItem(
-//             icon: Icons.phone_iphone_outlined,
-//             text: '+57 3017959031',
-//           ),
-//         ],
-//       ),
-//     );
-//   }
-// }
-
-class _ContactItem extends StatelessWidget {
-  const _ContactItem({
-    required this.text,
-    required this.icon,
-  });
-
-  final String text;
-  final IconData icon;
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          IconButton(
-            icon: Icon(
-              icon,
-              color: Colors.black,
-            ),
-            onPressed: null,
-            tooltip: text,
-          ),
-          Text(
-            text,
-            style: TextStyle(color: Colors.black),
-          )
-        ],
-      ),
     );
   }
 }

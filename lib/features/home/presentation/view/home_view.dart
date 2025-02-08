@@ -22,7 +22,7 @@ class HomeView extends StatelessWidget {
           ),
         ),
       ),
-      bottomNavigationBar: _ContacMe(),
+      bottomNavigationBar: ContacMe(),
     );
   }
 }
@@ -36,7 +36,6 @@ class _TitleSection extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 32, horizontal: 16),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             const Text(
               'Welcome to Johny Portfolio!',
@@ -52,41 +51,6 @@ class _TitleSection extends StatelessWidget {
               'This portfolio showcases my skills and projects.',
               style: TextStyle(fontSize: 30, color: Colors.white),
               textAlign: TextAlign.center,
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-class _ContacMe extends StatelessWidget {
-  const _ContacMe({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      width: MediaQuery.sizeOf(context).width,
-      height: MediaQuery.sizeOf(context).width * 0.05,
-      child: Card(
-        color: Colors.blue.shade100,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            _ContactItem(
-              icon: Icons.email,
-              text: 'hllsebastian@gmail.com',
-            ),
-            _ContactItem(
-              icon: Icons.linked_camera,
-              text: 'LinkedIn: https://www.linkedin.com/in/jospina-dev/',
-            ),
-            _ContactItem(
-              icon: Icons.phone_iphone_outlined,
-              text: '+57 3017959031',
             ),
           ],
         ),
