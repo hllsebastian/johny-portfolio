@@ -5,8 +5,8 @@ import 'package:johny_portfolio/features/pokemon/presentation/widgets/letter_but
 import 'package:johny_portfolio/features/pokemon/presentation/widgets/pokemon_image.dart';
 import 'package:johny_portfolio/features/pokemon/presentation/widgets/word_display.dart';
 
-class PokemonScreen extends StatelessWidget {
-  const PokemonScreen({super.key});
+class PokemonView extends StatelessWidget {
+  const PokemonView({super.key});
 
   @override
   Widget build(BuildContext context) {
